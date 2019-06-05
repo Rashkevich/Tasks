@@ -12,7 +12,7 @@ public static void main(String[] args) {
 	for (int i=0;i<a.length;i++) { //массив повторений
 		for (int j=0;j<a.length;j++) {
 			if (a[i]==a[j]) { 
-				arr[i]=arr[i]+1; 
+				arr[i]=arr[i]+1;  
 			}
 		}
 	}
