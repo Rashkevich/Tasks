@@ -1,4 +1,4 @@
-package branches;
+package by.tasks.basics.branches;
 
 public class Task1 {
 
