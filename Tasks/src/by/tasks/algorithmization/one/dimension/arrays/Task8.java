@@ -1,5 +1,9 @@
 package by.tasks.algorithmization.one.dimension.arrays;
 
+
+//8. Дана последовательность целых чисел n a ,a , ,a 1 2  . Образовать новую последовательность, выбросив из
+//исходной те члены, которые равны min( , , , ) 1 2 n a a  a .
+
 public class Task8 {
 public static void main(String[] args) {
 	int a[]= {0,1,2,3,4,5};

@@ -1,5 +1,8 @@
 package by.tasks.algorithmization.one.dimension.arrays;
 
+//4. Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и наименьший элементы.
+
+
 public class Task4 {
 public static void main(String[] args) {
 	int a[]= {1,2,3,4,9,6,7,8,5};

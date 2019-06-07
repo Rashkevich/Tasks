@@ -1,7 +1,8 @@
 package by.tasks.algorithmization.one.dimension.arrays;
 
 public class Task3 {
-
+//	3. ƒан массив действительных чисел, размерность которого N. ѕодсчитать, сколько в нем отрицательных,
+//	положительных и нулевых элементов.
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int a[]= {-5,0,-3,1,2,3,0,4,5,6,-1,7,8,9};

@@ -1,5 +1,9 @@
 package by.tasks.algorithmization.one.dimension.arrays;
 
+
+//9. В массиве целых чисел с количеством элементов n найти наиболее часто встречающееся число. Если таких
+//чисел несколько, то определить наименьшее из них.
+
 public class Task9 {
 public static void main(String[] args) {
 	int a[]= {1,2,1,0,3,5,2};

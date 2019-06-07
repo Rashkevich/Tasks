@@ -1,5 +1,8 @@
 package by.tasks.algorithmization.one.dimension.arrays;
 
+//7. Даны действительные числа n a ,a , ,a 1 2  . Найти
+//max( , , , ) 1 2 2 2 −1 +1 + + + n n n n a a a a  a a .
+
 public class Task7 {
 public static void main(String[] args) {
 	int a[]= {1,2,18,4,5,6,7,8,9,10};
@@ -20,6 +23,6 @@ public static void main(String[] args) {
 			max=sum[i];
 		}
 	}
-	System.out.println("������������ �����:"+max);
+	System.out.println("Максимальная сумма:"+max);
 }
 }

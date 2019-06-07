@@ -1,5 +1,8 @@
 package by.tasks.algorithmization.one.dimension.arrays;
 
+//6. «адана последовательность N вещественных чисел. ¬ычислить сумму чисел, пор€дковые номера которых
+//€вл€ютс€ простыми числами.
+
 public class Task6 {
 public static void main(String[] args) {
 	
