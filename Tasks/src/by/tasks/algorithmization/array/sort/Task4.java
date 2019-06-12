@@ -10,15 +10,19 @@ public class Task4 {
 	public static void main(String[] args) {
 		int arrOne[]={4,7,6,1,5,3,2};
 		int temp;
+		int count=0;
 		for (int i=0;i<arrOne.length;i++) {
 			for (int j=1;j<arrOne.length;j++) {
 				if (arrOne[j-1]>arrOne[j]) {
 					temp=arrOne[j-1];
 					arrOne[j-1]=arrOne[j];
 					arrOne[j]=temp;
+					count++;
 				}
 			}
 		}
+		
+		System.out.println("Количество перестановок:"+count);
 
 		for (int i=0;i<arrOne.length;i++) {
 			System.out.print(arrOne[i]+" ");
