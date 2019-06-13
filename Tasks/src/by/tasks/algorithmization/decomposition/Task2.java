@@ -84,21 +84,33 @@ public class Task2 {
 		}
 		
 		System.out.println("minimal length"+minLength+" Id="+minId);
-		int same[]=new int[minLength];
+		int same[]=m[minId];
 		int countSame=0;
-		for (int i=0;i<m[minId].length;i++) {//поиск множителей общих во всех числах
+		for (int i=0;i<same.length;i++) {
 			for (int j=0;j<m.length;j++) {
 				for (int k=0;k<m[j].length;k++) {
-					if (minId!=j) {
-						if (m[minId][i]==m[j][k]) {
-							same[countSame]=m[minId][i];
+					if (j!=minId) {
+						if(same[i]==m[j][k]) {
 							countSame++;
-							m[minId][i]=0;
+							m[j][k]=0;
 						}
 					}
 				}
 			}
 		}
+//		for (int i=0;i<m[minId].length;i++) {//поиск множителей общих во всех числах
+//			for (int j=0;j<m.length;j++) {
+//				for (int k=0;k<m[j].length;k++) {
+//					if (minId!=j) {
+//						if (m[minId][i]==m[j][k]) {
+//							same[countSame]=m[minId][i];
+//							countSame++;
+//							m[minId][i]=0;
+//						}
+//					}
+//				}
+//			}
+//		}
 		
 		return same;
 	}
@@ -125,7 +137,7 @@ public class Task2 {
 	
 	
 	public static void main(String[] args) {
-		int a[]= {150,40,150};
+		int a[]= {15,4,10};
 		int multiplier[][]=createMultiplierA(a);
 		System.out.println("Множители чисел");
 		prnt(multiplier);
