@@ -69,51 +69,42 @@ public class Task2 {
 		}
 	}
 	
-	public static int[] findSameNum(int[][] m) {//поиск множителей общих во всех числах
-		int maxLength=m[0].length;
-		int minLength=m[0].length;
-		int minId=0;
-		for (int i=1;i<m.length;i++) {//поиск цифры с минимальным количеством множителей
-//			if (maxLength<m[i].length) {
-//				maxLength=m[i].length;
-//			}
-			if (minLength>m[i].length) {
-				minLength=m[i].length;
-				minId=i;
-			}
-		}
-		
-		System.out.println("minimal length"+minLength+" Id="+minId);
-		int same[]=m[minId];
-		int countSame=0;
-		for (int i=0;i<same.length;i++) {
-			for (int j=0;j<m.length;j++) {
-				for (int k=0;k<m[j].length;k++) {
-					if (j!=minId) {
-						if(same[i]==m[j][k]) {
-							countSame++;
-							m[j][k]=0;
-						}
+	public static int findSameNum(int[][] m) {//поиск множителей общих во всех числах и определение НОД
+		int nod=1;
+		int temp=1;
+			for (int i=0;i<m[0].length;i++) {
+				int count=0;
+				temp=m[0][i];
+				for (int j=0;j<m.length;j++) {
+					temp=hasSame(m[j], temp);
+					if (temp!=1) {
+						count++;
+					}
+					if (count==m.length) {
+						nod=nod*temp;
 					}
 				}
 			}
-		}
-//		for (int i=0;i<m[minId].length;i++) {//поиск множителей общих во всех числах
-//			for (int j=0;j<m.length;j++) {
-//				for (int k=0;k<m[j].length;k++) {
-//					if (minId!=j) {
-//						if (m[minId][i]==m[j][k]) {
-//							same[countSame]=m[minId][i];
-//							countSame++;
-//							m[minId][i]=0;
-//						}
-//					}
-//				}
-//			}
-//		}
-		
-		return same;
+		return nod;
 	}
+	
+	
+	public static int hasSame(int m[], int num) {
+		int hasSame=1;
+		int counter=0;
+		for (int i=0;i<m.length;i++) {
+			if(m[i]==num) {
+				counter++;
+				if (counter==1) {
+					hasSame=m[i];
+					m[i]=0;
+				}
+			}
+		}
+		return hasSame;
+	}
+	
+	
 	
 	
 	public static int[][] createMultiplierA(int a[]){
@@ -121,30 +112,18 @@ public class Task2 {
 		for (int i=0;i<multiplierA.length;i++) {
 			multiplierA[i]=getMultiplier(a[i]);
 		}
-		
 		return multiplierA;
-	}
-	
-	public static int nod(int same[]) {
-		int nod=1;
-			for (int i=0;i<same.length;i++) {
-				if(same[i]!=0) {
-					nod=nod*same[i];
-				}
-			}
-		return nod;
 	}
 	
 	
 	public static void main(String[] args) {
-		int a[]= {15,4,10};
-		int multiplier[][]=createMultiplierA(a);
+		int a[]= {126,70,14,42};
+		int multiplier[][]=createMultiplierA(a);//матрица множителей
 		System.out.println("Множители чисел");
 		prnt(multiplier);
-		int same[]=findSameNum(multiplier);
+		int nod=findSameNum(multiplier);
 		System.out.println("Для чисел:");
 		prnt(a);
-		int nod=nod(same);
 		System.out.println("НОД:"+nod);
 		
 	}
