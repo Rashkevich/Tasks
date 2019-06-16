@@ -8,7 +8,8 @@ public class Task15 {
 	public static void main(String[] args) {
 		int n=4;
 		int endNum=findEndNum(n);
-		for(int i=0;i<=endNum;i++) {
+		int start=(int)Math.pow(10.0, (n-1));
+		for(int i=start;i<=endNum;i++) {
 			if(check(i)) {
 			System.out.println("цифры в числе образуют строго возрастающую последовательность "+i);	
 			}
