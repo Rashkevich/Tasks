@@ -10,8 +10,8 @@ public class Task13 {
 	public static void prnt(int i) {
 		System.out.println("число:"+i+" близнец:"+(i+2));
 	}
-	
-	
+ 	
+	 
 	public static void prnt() {
 		System.out.println("поиск окончен");
 	}
