@@ -14,11 +14,11 @@ public void add(Book book) {
 }
 
 public void getByAuthor(String author) {
-	storage.stream().filter(s->s.getAuthor()==author).forEach(System.out::println);
+	storage.stream().filter(s->s.getAuthor().equals(author)).forEach(System.out::println);
 }
 
 public void getByPublishHouse(String publish) {
-	storage.stream().filter(s->s.getPublishHouse()==publish).forEach(System.out::println);
+	storage.stream().filter(s->s.getPublishHouse().equals(publish)).forEach(System.out::println);
 }
 
 public void getByYear(int year) {
