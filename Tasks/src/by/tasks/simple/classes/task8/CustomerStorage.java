@@ -29,7 +29,9 @@ public void sort() {
 }
 
 public void cardInRange(long a, long b) {
-	list.stream().filter(s->(s.getCardNumber()>=a)&&(s.getCardNumber()<=b)).forEach(System.out::println);
+	list.stream()
+	.filter(s->(s.getCardNumber()>=a)&&(s.getCardNumber()<=b))
+	.forEach(System.out::println);
 }
 
 public void print() {
